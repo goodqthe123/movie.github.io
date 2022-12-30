@@ -30,7 +30,34 @@ function findMovies() {
 }
 
 //Highlight matched words
+/* let input = (movieSearchBox.value).trim();
 
+input.addEventListener("keyup", (e) => {
+    for(let i of searchList){
+        //convert input to lowercase and compare with each string
+        if(i.toLowerCase().startWith(input.ariaValueMax.
+           toLowerCase() ) && input.value !=""){
+
+            let listItem = document.createElement("li");
+            //One common class
+            listItem.classList.add("list-items")
+            listItem.style.cursor = "pointer";
+            listItem.setAttribute("onclick" , "displayName('" +
+           
+           i + "' )");
+
+           //Display matched part in bold
+           let word ="<b>" +  i.substr(0,input.value.length) + "</b>";
+           }
+           word = i.substr(input.value.length)
+    }
+
+});
+
+function displayName(value){
+    input.value=value;
+}
+ */
 function updateHaystack(input, needle) {
   return input.replace(
     new RegExp("(^|\\s)(" + needle + ")(\\s|$)", "ig"),
@@ -49,9 +76,7 @@ function displayMovieList(movies) {
     else moviePoster = "image_not_found.png"
 
     movieListItem.innerHTML = `
-    
         <div class = "search-item-thumbnail">
-        
             <img src = "${moviePoster}">
         </div>
         <div class = "search-item-info">
@@ -82,7 +107,7 @@ function loadMovieDetails() {
   })
 }
 
- function displayMovieDetails(details){
+/* function displayMovieDetails(details){
     resultGrid.innerHTML = `
     <div class = "movie-poster">
         <img src = "${(details.Poster != "N/A") ? details.Poster : "image_not_found.png"}" alt = "movie poster">
@@ -102,7 +127,7 @@ function loadMovieDetails() {
         <p class = "awards"><b><i class = "fas fa-award"></i></b> ${details.Awards}</p>
     </div>
     `;
-} 
+} */
 
 window.addEventListener("click", (event) => {
   if (event.target.className != "form-control") {
