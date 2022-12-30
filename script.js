@@ -107,7 +107,7 @@ function loadMovieDetails() {
   })
 }
 
-/* function displayMovieDetails(details){
+function displayMovieDetails(details){
     resultGrid.innerHTML = `
     <div class = "movie-poster">
         <img src = "${(details.Poster != "N/A") ? details.Poster : "image_not_found.png"}" alt = "movie poster">
@@ -127,7 +127,7 @@ function loadMovieDetails() {
         <p class = "awards"><b><i class = "fas fa-award"></i></b> ${details.Awards}</p>
     </div>
     `;
-} */
+} 
 
 window.addEventListener("click", (event) => {
   if (event.target.className != "form-control") {
